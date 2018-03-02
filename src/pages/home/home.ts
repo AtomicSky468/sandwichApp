@@ -4,19 +4,24 @@ import { SandwichPage } from '../sandwich/sandwich';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
+  //template: `<ion-nav [root]="HomePage"></ion-nav>`
 })
+
 export class HomePage {
 
   constructor(public navCtrl: NavController) {
-	  
-
-	  
+	   
 
   }
-  
-  	  YourFancyButton(){
-this.navController.setRoot(SandwichPage);
 }
 
+export class MyApp {
+  root = HomePage;
+
+  constructor(){
+  }
+
 }
+
+

@@ -1,0 +1,16 @@
+dans le fichier app.component.ts, ajoutez:
+
+	import { "Id"Page } from 'emplacement de la page';
+	
+a la suite des autres import en début de fichier.
+
+Faites de même pour le fichier app.module.ts
+
+Ajoutez "Id"Page en dessous des pages déclarées dans @NgModule -> declarations
+										   puis dans @NgModule -> bootstrap
+										   
+Maintenant, la page souhaitée est déclarée dans votre app, donc l'app reconnait cette page.
+
+Rendez vous dans pages/home pour la suite des instructions.
+
+

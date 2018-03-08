@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SandwichPage } from '../sandwich/sandwich';
-
+import { PanierPage } from '../panier/panier';
+import { AlertController } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -10,18 +11,13 @@ import { SandwichPage } from '../sandwich/sandwich';
 
 export class HomePage {
 
+	sandwich = SandwichPage
+	panier = PanierPage
   constructor(public navCtrl: NavController) {
-	   
-
   }
 }
 
-export class MyApp {
-  root = HomePage;
 
-  constructor(){
-  }
 
-}
 
 

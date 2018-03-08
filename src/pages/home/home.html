@@ -1,17 +1,25 @@
 
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      <p>Commander un sandwich</p>
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar>
+	
+	
+		<ion-title>
+			<div>
+				<p>
+					Commandez à manger 
+					<button ion-button icon-only float-right id="panier" [navPush]="panier"><ion-icon name="basket"></ion-icon></button>
+				</p>
+			</div>
+		</ion-title>
+		
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
-<div class="align">
- <button ion-button round class="button button-full" color="positive" onclick="location.href='sandwich/sandwich.html'">Sandwich</button>
- <button ion-button round class="button button-full" color="secondary" (click)="YourFancyButton()">Croques</button>
-</div>
+	<div class="align">
+		<button ion-button round class="button button-full" color="positive" [navPush]="sandwich">Sandwich</button>
+		<button ion-button round class="button button-full" color="secondary" (click)="YourFancyButton()">Croques</button>
+	</div>
 </ion-content>
 
        

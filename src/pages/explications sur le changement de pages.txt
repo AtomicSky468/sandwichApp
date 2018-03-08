@@ -1,0 +1,13 @@
+chaque page a son "identifiant". Par exemple ici, la page sandwich a un identifiant généré automatiquement nommé SandwichPage.
+
+A chaque fois qu'une page est créée, son identifiant est NomdelapagePage. Avec une majuscule au début du nom de la page suivi de ...Page
+
+exemples:
+RootPage
+XxxPage
+HomePage
+SandwichPage
+...
+et ainsi de suite
+
+Allez dans le dossier app/ pour la suite des explications

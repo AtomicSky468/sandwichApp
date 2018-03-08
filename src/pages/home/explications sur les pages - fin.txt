@@ -1,0 +1,14 @@
+Maintenant, rentrez dans home.html
+
+Apres la balise <ion-content padding>, entrez une balise permettant de passer a la page suivante, par exemple un bouton comme ceci
+<button ion-button round class="button button-full" color="positive" [navPush]="sandwich">joli bouton</button>
+
+Ce qui nous interesse est l'attribut [navPush]="sandwich". 
+[NavPush] correspond un un moyen de virer vers une autre page, on nous "push" sur une autre page.
+sandwich est un élément que l'on va déclarer dans le fichier home.ts
+
+A la suite de export class HomePage { , ecrivez sandwich = IdPage
+
+Cela revient a dire que sandwich, soit l'élément de navPush dans le bouton, va vous rediriger vers IdPage.
+
+Maintenant, si tout a bien été suivi, lors du clic sur le bouton de home.html, vous serez redirigé vers la page souhaitée.

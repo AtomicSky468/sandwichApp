@@ -7,12 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>sandwich</ion-title>
+    <ion-title>Choisissez parmi nos délicieux sandwiches</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+<button ion-button round class="button button-full" color="dagobert" [navPush]="taille">Dagobert</button>
+<button ion-button round class="button button-full" color="jambon" [navPush]="taille">Jambon</button>
+<button ion-button round class="button button-full" color="thon" [navPush]="taille">Thon Mayo</button>
+<button ion-button round class="button button-full" color="americain" [navPush]="taille">Américain</button>
+<button ion-button round class="button button-full" color="boulette" [navPush]="taille">Boulettes Andalouse</button>
+<button ion-button round class="button button-full" color="fromage" [navPush]="taille">Fromage</button>
+<button ion-button round class="button button-full" color="vs" [navPush]="taille">Variété de la semaine</button>
 </ion-content>

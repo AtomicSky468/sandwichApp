@@ -6,9 +6,14 @@ import { HomePage } from '../pages/home/home';
 import { SandwichPage } from '../pages/sandwich/sandwich';
 import { TaillePage } from '../pages/taille/taille';
 import { PanierPage } from '../pages/panier/panier';
+
+declare var x;
 @Component({
   templateUrl: 'app.html'
 })
+
+
+
 export class MyApp {
   rootPage:any = HomePage;
 

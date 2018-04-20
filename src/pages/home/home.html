@@ -7,7 +7,7 @@
 			<div>
 				<p>
 					Commandez à manger 
-					<button ion-button icon-only float-right id="panier" [navPush]="panier"><ion-icon name="basket"></ion-icon></button>
+					
 				</p>
 			</div>
 		</ion-title>
@@ -18,7 +18,13 @@
 <ion-content padding>
 	<div class="align">
 		<button ion-button round class="button button-full" color="positive" [navPush]="sandwich">Sandwich</button>
-		<button ion-button round class="button button-full" color="secondary" (click)="YourFancyButton()">Croques</button>
+		<button ion-button round class="button button-full" color="secondary" (click)="YourFancyButton()">Croques</button>	
+	</div>
+	<br><br><br>
+	<div color="positive">
+<img src='https://barcode.tec-it.com/barcode.ashx?data=
+    coucou
+    &code=Code128&dpi=96' alt='Barcode Generator TEC-IT'/>
 	</div>
 </ion-content>
 

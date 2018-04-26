@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SandwichPage } from '../sandwich/sandwich';
 import { PanierPage } from '../panier/panier';
+import { CroquePage } from '../croque/croque';
 import { AlertController } from 'ionic-angular';
 @Component({
   selector: 'page-home',
@@ -12,7 +13,7 @@ import { AlertController } from 'ionic-angular';
 export class HomePage {
 
 	sandwich = SandwichPage
-	panier = PanierPage
+	croque = CroquePage
   constructor(public navCtrl: NavController) {
   }
 }

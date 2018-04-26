@@ -16,9 +16,6 @@ if(document.getElementById("Radio1").checked) && (document.getElementById("Radio
 		if (x.style.display === "none") {
 			x.style.display = "block";
 		} 
-		else {
-			x.style.display = "none";
-		}
 	}
 }
 </script>
@@ -34,17 +31,6 @@ if(document.getElementById("Radio1").checked) && (document.getElementById("Radio
 
 
 <ion-content padding>
-
-<!--
-<button ion-button round class="button button-full" color="dagobert" [navPush]="taille">Dagobert</button>
-<button ion-button round class="button button-full" color="jambon" [navPush]="taille">Jambon</button>
-<button ion-button round class="button button-full" color="thon" [navPush]="taille">Thon Mayo</button>
-<button ion-button round class="button button-full" color="americain" [navPush]="taille">Américain</button>
-<button ion-button round class="button button-full" color="boulette" [navPush]="taille">Boulettes Andalouse</button>
-<button ion-button round class="button button-full" color="fromage" [navPush]="taille">Fromage</button>
-<button ion-button round class="button button-full" color="vs" [navPush]="taille">Variété de la semaine</button>
--->
-
 
 <div class = "panel panel-primary">
    <div class="panel-heading">
@@ -96,7 +82,7 @@ if(document.getElementById("Radio1").checked) && (document.getElementById("Radio
         </div>
 </div>
 
-<button id="myDIV">Commander</button>
+<button id="myDIV" (click)="presentConfirm()">Commander</button>
 
 
 	

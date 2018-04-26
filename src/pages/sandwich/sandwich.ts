@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TaillePage} from '../taille/taille';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { TaillePage } from '../taille/taille';
+import { PanierPage } from '../panier/panier';
+
+
 
 /**
  * Generated class for the SandwichPage page.
@@ -17,11 +20,40 @@ import { TaillePage} from '../taille/taille';
 export class SandwichPage {
 
 	taille = TaillePage
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+	panier = PanierPage
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
+  
+presentConfirm() {
+  let alert = this.alertCtrl.create({
+    title: 'Confirmation de commande',
+    message: 'Voulez-vous commander ce sandwich?',
+    buttons: [
+      {
+        text: 'Non',
+        role: 'cancel',
+        handler: () => {
+          console.log('No clicked');
+        }
+      },
+      {
+        text: 'Oui',
+        handler: () => {
+          console.log('Yes clicked');
+		  [navPush] = PanierPage
+        }
+      }
+    ]
+  });
+  alert.present();
+}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SandwichPage');
   }
+  
+  
 
 }
+
+

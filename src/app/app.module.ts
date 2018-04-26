@@ -1,3 +1,4 @@
+//importer les pages ici
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -8,14 +9,19 @@ import { HomePage } from '../pages/home/home';
 import { SandwichPage } from '../pages/sandwich/sandwich';
 import { TaillePage } from '../pages/taille/taille';
 import { PanierPage } from '../pages/panier/panier';
+import { CroquePage } from '../pages/croque/croque';
+
 
 @NgModule({
   declarations: [
+	//rajouter les pages ici
     MyApp,
     HomePage,
 	SandwichPage,
 	TaillePage,
-	PanierPage
+	PanierPage,
+	CroquePage
+	
   ],
   imports: [
     BrowserModule,
@@ -23,11 +29,13 @@ import { PanierPage } from '../pages/panier/panier';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+	//rajouter les pages ici
     MyApp,
     HomePage,
 	SandwichPage,
 	TaillePage,
-	PanierPage
+	PanierPage,
+	CroquePage
   ],
   providers: [
     StatusBar,

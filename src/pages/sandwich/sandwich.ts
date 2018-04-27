@@ -42,7 +42,7 @@ presentConfirm() {
         text: 'Oui',
         handler: () => {
         console.log('Yes clicked'),
-		location.url('/panier');
+		window.location.href='http://www.youtube.com'; /*ici il faut reussir a trouver un lien pour aller vers panierPage*/
 		 
         }
       }

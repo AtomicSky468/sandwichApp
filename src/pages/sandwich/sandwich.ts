@@ -12,6 +12,7 @@ import { PanierPage } from '../panier/panier';
  * Ionic pages and navigation.
  */
 
+ 
 @IonicPage()
 @Component({
   selector: 'page-sandwich',
@@ -21,6 +22,7 @@ export class SandwichPage {
 
 	taille = TaillePage
 	panier = PanierPage
+	
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
   
@@ -39,8 +41,9 @@ presentConfirm() {
       {
         text: 'Oui',
         handler: () => {
-          console.log('Yes clicked');
-		  [navPush] = PanierPage
+        console.log('Yes clicked'),
+		location.url('/panier');
+		 
         }
       }
     ]

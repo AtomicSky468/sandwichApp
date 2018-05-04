@@ -52,9 +52,8 @@ var PanierPage = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SandwichPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
-throw new Error("Cannot find module \"angular/common\"");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__taille_taille__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__panier_panier__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__taille_taille__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__panier_panier__ = __webpack_require__(100);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68,7 +67,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 /**
  * Generated class for the SandwichPage page.
  *
@@ -76,17 +74,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var SandwichPage = (function () {
-    function SandwichPage(navCtrl, navParams, alertCtrl, authService, router, location) {
+    function SandwichPage(navCtrl, navParams, alertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.alertCtrl = alertCtrl;
-        this.authService = authService;
-        this.router = router;
-        this.location = location;
-        this.taille = __WEBPACK_IMPORTED_MODULE_3__taille_taille__["a" /* TaillePage */];
-        this.panier = __WEBPACK_IMPORTED_MODULE_4__panier_panier__["a" /* PanierPage */];
+        this.taille = __WEBPACK_IMPORTED_MODULE_2__taille_taille__["a" /* TaillePage */];
+        this.panier = __WEBPACK_IMPORTED_MODULE_3__panier_panier__["a" /* PanierPage */];
     }
     SandwichPage.prototype.presentConfirm = function () {
+        var _this = this;
         var alert = this.alertCtrl.create({
             title: 'Confirmation de commande',
             message: 'Voulez-vous commander ce sandwich?',
@@ -102,7 +98,7 @@ var SandwichPage = (function () {
                     text: 'Oui',
                     handler: function () {
                         console.log('Yes clicked'),
-                            $location.path("../pages/panier/panier");
+                            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__panier_panier__["a" /* PanierPage */]);
                     }
                 }
             ]
@@ -116,10 +112,10 @@ var SandwichPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-sandwich',template:/*ion-inline-start:"C:\Users\RIchard\Documents\todo\src\pages\sandwich\sandwich.html"*/'\n  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">\n    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>\n    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>\n	\n	<style>\n#myDIV{\ndisplay: none;\n}\n	</style>\n	\n<script>\nif(document.getElementById("Radio1").checked) && (document.getElementById("Radio2").checked) {\n	function myFunction() {\n		var x = document.getElementById("myDIV");\n		if (x.style.display === "none") {\n			x.style.display = "block";\n		} \n	}\n}\n</script>\n\n\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Choisissez parmi nos délicieux sandwiches</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n<div class = "panel panel-primary">\n   <div class="panel-heading">\n        <h3 class="panel-title">Sandwich</h3>\n    </div>\n\n		<div class="radio">\n            <label>\n                <input type="radio" color="dagobert" id="Radio1" onclick="myFunction()" name="sandwich">Dagobert</label>\n        </div>\n        <div class="radio">\n            <label>\n                <input type="radio" color="jambon" id="Radio1" onclick="myFunction()" name="sandwich">Jambon</label>\n        </div>\n        <div class="radio">\n            <label>\n                <input type="radio" color="thon" id="Radio1" onclick="myFunction()" name="sandwich">Thon Mayo</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="americain" id="Radio1" onclick="myFunction()" name="sandwich">Américain</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="boulette" id="Radio1" onclick="myFunction()" name="sandwich">Boulettes Andalouse</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="fromage" id="Radio1" onclick="myFunction()" name="sandwich">Fromage</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="vs" id="Radio1" onclick="myFunction()" name="sandwich">Variété de la Semaine</label>\n        </div>\n</div>\n<div class = "panel panel-primary">\n   <div class="panel-heading">\n        <h3 class="panel-title">Taille</h3>\n    </div>\n\n   \n		<div class="radio">\n            <label>\n                <input type="radio" color="fromage" id="Radio2" onclick="myFunction()" name="taille">Petit - 2€</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="vs" id="Radio2" onclick="myFunction()" name="taille">Grand - 3€</label>\n        </div>\n</div>\n\n<button id="myDIV" (click)="presentConfirm()">Commander</button>\n\n\n	\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\RIchard\Documents\todo\src\pages\sandwich\sandwich.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object, Object, Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2_angular_common__["Location"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angular_common__["Location"]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object])
     ], SandwichPage);
     return SandwichPage;
-    var _a, _b, _c, _d;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=sandwich.js.map

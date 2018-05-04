@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
-import { Location } from 'angular/common';
+import { Location } from '@angular/common';
 import { TaillePage } from '../taille/taille';
 import { PanierPage } from '../panier/panier';
  
@@ -24,9 +24,9 @@ export class SandwichPage {
   taille = TaillePage
   panier = PanierPage
   
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private authService:AuthService, private router:Router, private location:Location ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
-  
+
 presentConfirm() {
   let alert = this.alertCtrl.create({
     title: 'Confirmation de commande',
@@ -40,13 +40,15 @@ presentConfirm() {
         }
       },
       {
-		  text: 'Oui',
+		  text: 'Oui',			
         handler: () => {
-        console.log('Yes clicked'),
-    $location.path("../pages/panier/panier");
+        console.log('Yes clicked'),	
+		this.navCtrl.push(PanierPage);
+  }
+
      
         }
-      }
+      
     ]
   });
   alert.present();

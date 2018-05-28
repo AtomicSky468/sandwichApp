@@ -85,7 +85,7 @@ var SandwichPage = (function () {
         var _this = this;
         var alert = this.alertCtrl.create({
             title: 'Confirmation de commande',
-            message: 'Voulez-vous commander ce sandwich?',
+            message: 'Voulez-vous vraiment commander ça ?',
             buttons: [
                 {
                     text: 'Non',
@@ -110,12 +110,11 @@ var SandwichPage = (function () {
     };
     SandwichPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-sandwich',template:/*ion-inline-start:"C:\Users\RIchard\Documents\todo\src\pages\sandwich\sandwich.html"*/'\n  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">\n    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>\n    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>\n	\n	<style>\n#myDIV{\ndisplay: none;\n}\n	</style>\n	\n<script>\nif(document.getElementById("Radio1").checked) && (document.getElementById("Radio2").checked) {\n	function myFunction() {\n		var x = document.getElementById("myDIV");\n		if (x.style.display === "none") {\n			x.style.display = "block";\n		} \n	}\n}\n</script>\n\n\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Choisissez parmi nos délicieux sandwiches</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n<div class = "panel panel-primary">\n   <div class="panel-heading">\n        <h3 class="panel-title">Sandwich</h3>\n    </div>\n\n		<div class="radio">\n            <label>\n                <input type="radio" color="dagobert" id="Radio1" onclick="myFunction()" name="sandwich">Dagobert</label>\n        </div>\n        <div class="radio">\n            <label>\n                <input type="radio" color="jambon" id="Radio1" onclick="myFunction()" name="sandwich">Jambon</label>\n        </div>\n        <div class="radio">\n            <label>\n                <input type="radio" color="thon" id="Radio1" onclick="myFunction()" name="sandwich">Thon Mayo</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="americain" id="Radio1" onclick="myFunction()" name="sandwich">Américain</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="boulette" id="Radio1" onclick="myFunction()" name="sandwich">Boulettes Andalouse</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="fromage" id="Radio1" onclick="myFunction()" name="sandwich">Fromage</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="vs" id="Radio1" onclick="myFunction()" name="sandwich">Variété de la Semaine</label>\n        </div>\n</div>\n<div class = "panel panel-primary">\n   <div class="panel-heading">\n        <h3 class="panel-title">Taille</h3>\n    </div>\n\n   \n		<div class="radio">\n            <label>\n                <input type="radio" color="fromage" id="Radio2" onclick="myFunction()" name="taille">Petit - 2€</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="vs" id="Radio2" onclick="myFunction()" name="taille">Grand - 3€</label>\n        </div>\n</div>\n\n<button id="myDIV" (click)="presentConfirm()">Commander</button>\n\n\n	\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\RIchard\Documents\todo\src\pages\sandwich\sandwich.html"*/,
+            selector: 'page-sandwich',template:/*ion-inline-start:"C:\Users\RIchard\Documents\todo\src\pages\sandwich\sandwich.html"*/'\n  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">\n    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>\n    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>\n	\n	<style>\n#myDIV{\ndisplay: none;\n}\n	</style>\n	\n<script>\nif(document.getElementById("Radio1").checked) && (document.getElementById("Radio2").checked) {\n	function myFunction() {\n		var x = document.getElementById("myDIV");\n		if (x.style.display === "none") {\n			x.style.display = "block";\n		} \n	}\n}\n</script>\n\n\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Choisissez parmi nos délicieux sandwiches</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n\n<form action="test.php" method="post">\n<div class = "panel panel-primary">\n   <div class="panel-heading">\n        <h3 class="panel-title">Sandwich</h3>\n    </div>\n\n		<div class="radio">\n            <label>\n                <input type="radio" color="dagobert" id="Radio1" ng-click="sandwich = dagobert" onclick="myFunction()" name="sandwich">Dagobert</label>\n        </div>\n        <div class="radio">\n            <label>\n                <input type="radio" color="jambon" id="Radio1" ng-click="sandwich = jambon" onclick="myFunction()" name="sandwich">Jambon</label>\n        </div>\n        <div class="radio">\n            <label>\n                <input type="radio" color="thon" id="Radio1" ng-click="sandwich = thon mayo" onclick="myFunction()" name="sandwich">Thon Mayo</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="americain" id="Radio1" ng-click="sandwich = américain" onclick="myFunction()" name="sandwich">Américain</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="boulette" id="Radio1" ng-click="boulettes andalouse" onclick="myFunction()" name="sandwich">Boulettes Andalouse</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="fromage" id="Radio1" ng-click="sandwich = fromage" onclick="myFunction()" name="sandwich">Fromage</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="vs" id="Radio1" ng-click="sandwich = variété de la semaine" onclick="myFunction()" name="sandwich">Variété de la Semaine</label>\n        </div>\n</div>\n\n<div class = "panel panel-primary">\n   <div class="panel-heading">\n        <h3 class="panel-title">Taille</h3>\n    </div>\n\n   \n		<div class="radio">\n            <label>\n                <input type="radio" color="fromage" id="Radio2" ng-click="taille = petit" onclick="myFunction()" name="taille">Petit - 2€</label>\n        </div>\n		<div class="radio">\n            <label>\n                <input type="radio" color="vs" id="Radio2" ng-click="taille = grand" onclick="myFunction()" name="taille">Grand - 3€</label>\n        </div>\n</div>\n\n\n<input type="submit" id="myDIV" (click)="presentConfirm()" value=" Commander un <span> {{taille}} {{sandwich}} </span>"/>  \n</form>\n\n<div ng-app="myApp" ng-controller="myCtrl">\n\n<button ng-click="myFunction()">Click me!</button>\n\n<p>{{ count }}</p>\n\n</div>\n<script>\nvar app = angular.module(\'myApp\', []);\napp.controller(\'myCtrl\', function($scope) {\n    $scope.count = 0;\n    $scope.myFunction = function() {\n        $scope.count++;\n    }\n});\n</script>\n\n	\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\RIchard\Documents\todo\src\pages\sandwich\sandwich.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], SandwichPage);
     return SandwichPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=sandwich.js.map
@@ -318,7 +317,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-//importer les pages ici
+//importer les pages et modules ici
 
 
 
@@ -369,7 +368,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
-            ]
+            ],
         })
     ], AppModule);
     return AppModule;
@@ -433,6 +432,7 @@ var MyApp = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CroquePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__panier_panier__ = __webpack_require__(100);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -444,6 +444,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Generated class for the CroquePage page.
  *
@@ -451,20 +452,70 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var CroquePage = (function () {
-    function CroquePage(navCtrl, navParams) {
+    function CroquePage(navCtrl, navParams, alertCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.alertCtrl = alertCtrl;
     }
+    CroquePage.prototype.confirmcroque = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirmation de commande',
+            message: 'Voulez-vous vraiment commander un croque-monsieur?',
+            buttons: [
+                {
+                    text: 'Non',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('No clicked');
+                    }
+                },
+                {
+                    text: 'Oui',
+                    handler: function () {
+                        console.log('Yes clicked'),
+                            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__panier_panier__["a" /* PanierPage */]);
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    CroquePage.prototype.confirmpanini = function () {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirmation de commande',
+            message: 'Voulez-vous vraiment commander un panini?',
+            buttons: [
+                {
+                    text: 'Non',
+                    role: 'cancel',
+                    handler: function () {
+                        console.log('No clicked');
+                    }
+                },
+                {
+                    text: 'Oui',
+                    handler: function () {
+                        console.log('Yes clicked'),
+                            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__panier_panier__["a" /* PanierPage */]);
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
     CroquePage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad CroquePage');
     };
     CroquePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-croque',template:/*ion-inline-start:"C:\Users\RIchard\Documents\todo\src\pages\croque\croque.html"*/'<!--\n  Generated template for the CroquePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Croques-monsieur & paninis</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n		<button ion-button round class="button button-full" color="thon" >Croque-Monsieur</button>\n		<button ion-button round class="button button-full" color="dagobert" >Panini</button>	\n</ion-content>\n'/*ion-inline-end:"C:\Users\RIchard\Documents\todo\src\pages\croque\croque.html"*/,
+            selector: 'page-croque',template:/*ion-inline-start:"C:\Users\RIchard\Documents\todo\src\pages\croque\croque.html"*/'<!--\n  Generated template for the CroquePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Croques-monsieur & paninis</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n		<button ion-button round class="button button-full" color="thon" (click)="confirmcroque()" >Croque-Monsieur</button>\n		<button ion-button round class="button button-full" color="dagobert" (click)="confirmpanini()" >Panini</button>	\n</ion-content>\n'/*ion-inline-end:"C:\Users\RIchard\Documents\todo\src\pages\croque\croque.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object])
     ], CroquePage);
     return CroquePage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=croque.js.map

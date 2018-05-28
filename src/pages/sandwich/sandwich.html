@@ -32,6 +32,8 @@ if(document.getElementById("Radio1").checked) && (document.getElementById("Radio
 
 <ion-content padding>
 
+
+<form action="test.php" method="post">
 <div class = "panel panel-primary">
    <div class="panel-heading">
         <h3 class="panel-title">Sandwich</h3>
@@ -39,33 +41,34 @@ if(document.getElementById("Radio1").checked) && (document.getElementById("Radio
 
 		<div class="radio">
             <label>
-                <input type="radio" color="dagobert" id="Radio1" onclick="myFunction()" name="sandwich">Dagobert</label>
+                <input type="radio" color="dagobert" id="Radio1" ng-click="sandwich = dagobert" onclick="myFunction()" name="sandwich">Dagobert</label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" color="jambon" id="Radio1" onclick="myFunction()" name="sandwich">Jambon</label>
+                <input type="radio" color="jambon" id="Radio1" ng-click="sandwich = jambon" onclick="myFunction()" name="sandwich">Jambon</label>
         </div>
         <div class="radio">
             <label>
-                <input type="radio" color="thon" id="Radio1" onclick="myFunction()" name="sandwich">Thon Mayo</label>
+                <input type="radio" color="thon" id="Radio1" ng-click="sandwich = thon mayo" onclick="myFunction()" name="sandwich">Thon Mayo</label>
         </div>
 		<div class="radio">
             <label>
-                <input type="radio" color="americain" id="Radio1" onclick="myFunction()" name="sandwich">Américain</label>
+                <input type="radio" color="americain" id="Radio1" ng-click="sandwich = américain" onclick="myFunction()" name="sandwich">Américain</label>
         </div>
 		<div class="radio">
             <label>
-                <input type="radio" color="boulette" id="Radio1" onclick="myFunction()" name="sandwich">Boulettes Andalouse</label>
+                <input type="radio" color="boulette" id="Radio1" ng-click="boulettes andalouse" onclick="myFunction()" name="sandwich">Boulettes Andalouse</label>
         </div>
 		<div class="radio">
             <label>
-                <input type="radio" color="fromage" id="Radio1" onclick="myFunction()" name="sandwich">Fromage</label>
+                <input type="radio" color="fromage" id="Radio1" ng-click="sandwich = fromage" onclick="myFunction()" name="sandwich">Fromage</label>
         </div>
 		<div class="radio">
             <label>
-                <input type="radio" color="vs" id="Radio1" onclick="myFunction()" name="sandwich">Variété de la Semaine</label>
+                <input type="radio" color="vs" id="Radio1" ng-click="sandwich = variété de la semaine" onclick="myFunction()" name="sandwich">Variété de la Semaine</label>
         </div>
 </div>
+
 <div class = "panel panel-primary">
    <div class="panel-heading">
         <h3 class="panel-title">Taille</h3>
@@ -74,17 +77,36 @@ if(document.getElementById("Radio1").checked) && (document.getElementById("Radio
    
 		<div class="radio">
             <label>
-                <input type="radio" color="fromage" id="Radio2" onclick="myFunction()" name="taille">Petit - 2€</label>
+                <input type="radio" color="fromage" id="Radio2" ng-click="taille = petit" onclick="myFunction()" name="taille">Petit - 2€</label>
         </div>
 		<div class="radio">
             <label>
-                <input type="radio" color="vs" id="Radio2" onclick="myFunction()" name="taille">Grand - 3€</label>
+                <input type="radio" color="vs" id="Radio2" ng-click="taille = grand" onclick="myFunction()" name="taille">Grand - 3€</label>
         </div>
 </div>
 
-<button id="myDIV" (click)="presentConfirm()">Commander</button>
 
+<input type="submit" id="myDIV" (click)="presentConfirm()" value=" Commander un <span> {{taille}} {{sandwich}} </span>"/>  
+</form>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<button ng-click="myFunction()">Click me!</button>
+
+<p>{{ count }}</p>
+
+</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.count = 0;
+    $scope.myFunction = function() {
+        $scope.count++;
+    }
+});
+</script>
 
 	
 
 </ion-content>
+

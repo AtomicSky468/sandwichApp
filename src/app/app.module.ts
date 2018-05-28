@@ -1,4 +1,4 @@
-//importer les pages ici
+//importer les pages et modules ici
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -10,6 +10,7 @@ import { SandwichPage } from '../pages/sandwich/sandwich';
 import { TaillePage } from '../pages/taille/taille';
 import { PanierPage } from '../pages/panier/panier';
 import { CroquePage } from '../pages/croque/croque';
+
 
 
 @NgModule({
@@ -41,6 +42,6 @@ import { CroquePage } from '../pages/croque/croque';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
 })
 export class AppModule {}

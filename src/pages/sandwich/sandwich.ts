@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angul
 import { Location } from '@angular/common';
 import { TaillePage } from '../taille/taille';
 import { PanierPage } from '../panier/panier';
+
+
+
  
  
  
@@ -26,11 +29,16 @@ export class SandwichPage {
   
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
+  
 
 presentConfirm() {
+	
   let alert = this.alertCtrl.create({
+	  
     title: 'Confirmation de commande',
-    message: 'Voulez-vous commander ce sandwich?',
+	
+    message: 'Voulez-vous vraiment commander ça ?',
+
     buttons: [
       {
         text: 'Non',
@@ -58,7 +66,6 @@ presentConfirm() {
     console.log('ionViewDidLoad SandwichPage');
   }
   
-  
- 
+
 }
  

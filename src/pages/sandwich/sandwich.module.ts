@@ -3,6 +3,9 @@ import { IonicPageModule } from 'ionic-angular';
 import { SandwichPage } from './sandwich';
 import { TaillePage } from '../taille/taille';
 import { PanierPage } from '../panier/panier';
+import { HttpModule } from '@angular/http';
+
+
 
 @NgModule({
   declarations: [
